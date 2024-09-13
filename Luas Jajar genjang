@@ -1,0 +1,12 @@
+Algoritma:
+
+1.Masukan Panjang 5
+2.Masukan tinggi 3
+3.Hasil luas adalah Panjang dikali tinggi
+4.Tampilkan Hasil
+
+Pseudocode:
+1.Input 5
+2.Input 3
+3.Luas=5*3
+4.Print hasil
