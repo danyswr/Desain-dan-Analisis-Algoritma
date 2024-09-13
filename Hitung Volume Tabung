@@ -1,0 +1,12 @@
+Algoritma:
+
+1.Masukan Jari-jari Tabung 3
+2.Masukaan Tinggi tabung 5
+3.Hitung Volume tabung dengan rumus pi*jari-jari kuadrat*tinggi
+4.Tampilkan Volume
+
+Pseudocode:
+1.Input jari-jari 3
+2.Input tinggi 5
+3.Volume=pi*jari-jari kuadrat*tinggi
+4.Print Volume
