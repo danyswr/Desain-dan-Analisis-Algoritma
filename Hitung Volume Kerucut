@@ -1,0 +1,14 @@
+Algoritma:
+
+1.Masukkan diameter kerucut 5
+2.Masukkan tinggi kerucut 4
+3.hitung diameter menjadi jari jari dibagi 2
+4.Hasil volume kerucut adalah 1/3 dikali pi dikali jari-jari kuadrat dikali tinggi
+5.Tampilkan hasil Volume
+
+Pseudocode:
+1.Input diameter 5
+2.Input Tinggi 4
+3.diamter=jari-jari/2
+4.Volume=1/3*pi*5^2*4
+5.Print Volume
