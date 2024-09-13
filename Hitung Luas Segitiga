@@ -1,0 +1,13 @@
+Algoritma:
+
+1.Masukan nilai alas 25
+2.Masukan niai tinggi 30
+3.Hasil luas adalah 25 dikali 30 dibagi 2
+4.Tampilkan hasil luas
+
+
+Pseudocode:
+1.Input 25
+2.Input 30
+3.Luas=25*30/2
+4.Print Hasil Luas
