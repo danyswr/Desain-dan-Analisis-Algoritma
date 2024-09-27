@@ -1,0 +1,120 @@
+# Sweep function
+var1 = 1
+var2 = 2
+var3 = 3
+var1, var2, var3 = var3, var2, var1
+print(var1, var2, var3)  # Output: 3 2 1
+
+# Latihan bubble sort
+def bubble_sort(bilangan):
+    lastElementIndex = len(bilangan) - 1
+    for PassNo in range(lastElementIndex, 0, -1):  # Menggunakan huruf kecil
+        for idx in range(PassNo):
+            if bilangan[idx] > bilangan[idx + 1]:
+                bilangan[idx], bilangan[idx + 1] = bilangan[idx + 1], bilangan[idx]
+    return bilangan  # Pindahkan return di luar loop
+
+# Contoh penggunaan bubble sort
+bilangan = [100, 20, 60, 90, 40, 30, 10]
+hasil_bubble_sort = bubble_sort(bilangan)
+print("Bilangan setelah diurutkan dengan bubble sort:", hasil_bubble_sort)
+
+# Latihan insertion sort
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+    return arr
+
+# Contoh penggunaan insertion sort
+bilangan = [89, 12, 57, 16, 25, 11, 75]
+hasil_insertion_sort = insertion_sort(bilangan)
+print("Bilangan setelah diurutkan dengan insertion sort:", hasil_insertion_sort)
+
+# Latihan selection sort
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        min_idx = i
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+    return arr
+
+# Contoh penggunaan selection sort
+bilangan = [89, 12, 57, 16, 25, 11, 75]
+hasil_selection_sort = selection_sort(bilangan)
+print("Bilangan setelah diurutkan dengan selection sort:", hasil_selection_sort)
+
+# Latihan linear search
+def linear_search(lst, x):
+    for i in range(len(lst)):
+        if lst[i] == x:
+            return i
+    return -1
+
+huruf = ['y', 'u', 'i', 'w', 'o', 'a', 'q', 'u', 'j', 'p']
+cari = 'a'
+hasil_linear_search = linear_search(huruf, cari)
+
+if hasil_linear_search != -1:
+    print("Huruf", cari, "ditemukan pada indeks", hasil_linear_search)
+else:
+    print("Huruf", cari, "tidak ditemukan")
+
+# Latihan binary search
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (high + low) // 2
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
+    return -1
+
+huruf = ['a', 'i', 'j', 'o', 'p', 'q', 'u', 'w', 'y']
+cari = 'a'
+hasil_binary_search = binary_search(huruf, cari)
+
+if hasil_binary_search != -1:
+    print("Huruf", cari, "ditemukan pada indeks", hasil_binary_search)
+else:
+    print("Huruf", cari, "tidak ditemukan")
+
+# Latihan interpolation search
+def interpolation_search(arr, lo, hi, x):
+    if lo <= hi and arr[lo] <= x and arr[hi] >= x:
+        pos = lo + int(((float(hi - lo) / (arr[hi] - arr[lo])) * (x - arr[lo])))
+
+        if arr[pos] == x:
+            return pos
+        if arr[pos] < x:
+            return interpolation_search(arr, pos + 1, hi, x)
+        if arr[pos] > x:
+            return interpolation_search(arr, lo, pos - 1, x)
+
+    return -1
+
+# Deret huruf (harus terurut)
+huruf = ['a', 'i', 'j', 'o', 'p', 'q', 'u', 'w', 'y']
+
+# Elemen yang dicari
+cari = 'a'
+
+# Panggil fungsi interpolation_search
+hasil_interpolation_search = interpolation_search(huruf, 0, len(huruf) - 1, cari)
+
+if hasil_interpolation_search != -1:
+    print("Huruf", cari, "ditemukan pada indeks", hasil_interpolation_search)
+else:
+    print("Huruf", cari, "tidak ditemukan")
